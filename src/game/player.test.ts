@@ -37,7 +37,8 @@ describe("Player", () => {
         const player2 = new Player("player2", 100);
 
         player1.addPayOrder({ owes: player2, amount: 200 });
-        
-        expect(() => player1.completePayOrder()).toThrowError();
+        expect(() => player1.completePayOrder()).toThrowError(
+            "player1 does not have enough to pay player2"
+        );
     });
 });

@@ -14,7 +14,9 @@ export class Player {
     }
     public completePayOrder() {
         const otherPlayer = this._payOrder.owes;
-
+        if (this.money < this._payOrder.amount) {
+            throw new Error(`${this.name} does not have enough to pay ${otherPlayer.name}`);
+        }
         this.money = this.money - this._payOrder.amount;
         otherPlayer.money = otherPlayer.money + this._payOrder.amount;
 
