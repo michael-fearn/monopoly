@@ -1,25 +1,43 @@
 {
-  "name": "monopoly",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michael-fearn/monopoly.git"
-  },
-  "author": "Michael Fearn",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/michael-fearn/monopoly/issues"
-  },
-  "homepage": "https://github.com/michael-fearn/monopoly#readme",
-  "devDependencies": {
-    "@types/jest": "^26.0.20",
-    "jest": "^26.6.3",
-    "ts-jest": "^26.5.3",
-    "typescript": "^4.2.3"
-  }
+    "name": "monopoly",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "lint": "eslint 'src/' --fix",
+        "test": "jest"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": [
+            "eslint --fix"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/michael-fearn/monopoly.git"
+    },
+    "author": "Michael Fearn",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/michael-fearn/monopoly/issues"
+    },
+    "homepage": "https://github.com/michael-fearn/monopoly#readme",
+    "devDependencies": {
+        "@types/jest": "^26.0.20",
+        "@typescript-eslint/eslint-plugin": "^4.17.0",
+        "@typescript-eslint/parser": "^4.17.0",
+        "eslint": "^7.21.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-prettier": "^3.3.1",
+        "husky": "^5.1.3",
+        "jest": "^26.6.3",
+        "prettier": "^2.2.1",
+        "ts-jest": "^26.5.3",
+        "typescript": "^4.2.3"
+    }
 }

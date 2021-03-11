@@ -7,14 +7,14 @@ export class Game {
         this.board = new Board();
     }
 
-    public endTurn() {
+    public endTurn(): void {
         const [currentPlayer, ...players] = this.turnOrder;
-        
+
         if (currentPlayer.payOrder) {
             const { owes, amount } = currentPlayer.payOrder;
             throw new Error(`${currentPlayer.name} owes ${owes.name} ${amount} money.`);
         }
-        
+
         this.turnOrder = [...players, currentPlayer];
     }
 }

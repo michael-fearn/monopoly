@@ -1,18 +1,19 @@
-type PayOrder = { owes: Player; amount: number };
+type PayOrder = { owes: Player; amount: number } | null;
 
 export class Player {
     private _payOrder: PayOrder = null;
 
     constructor(public name: string, public money: number) {}
 
-    get payOrder() {
+    get payOrder(): PayOrder {
         return this._payOrder;
     }
 
-    public addPayOrder(payOrder: PayOrder) {
+    public addPayOrder(payOrder: PayOrder): void {
         this._payOrder = payOrder;
     }
-    public completePayOrder() {
+    public completePayOrder(): void {
+        if (!this._payOrder) return;
         const otherPlayer = this._payOrder.owes;
 
         if (this.money < this._payOrder.amount)
