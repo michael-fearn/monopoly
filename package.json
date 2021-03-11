@@ -1,0 +1,25 @@
+{
+  "name": "monopoly",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michael-fearn/monopoly.git"
+  },
+  "author": "Michael Fearn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michael-fearn/monopoly/issues"
+  },
+  "homepage": "https://github.com/michael-fearn/monopoly#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.3",
+    "typescript": "^4.2.3"
+  }
+}
