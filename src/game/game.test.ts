@@ -29,8 +29,7 @@ describe("Game", () => {
     });
 
     test("Cannot endTurn if current player has a payOrder", () => {
-        player1.addPayOrder({owes: player2, amount: 100});
-        expect(() => game.endTurn()).toThrowError('player1 owes player2 100 money.')
-    })
+        player1.addPayOrder({ owes: player2, amount: 100 });
+        expect(() => game.endTurn()).toThrowError("player1 owes player2 100 money.");
+    });
 });
-``
