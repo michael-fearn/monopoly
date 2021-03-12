@@ -1,0 +1,29 @@
+board give you whats at a given position
+it could return a class for the different category of title 
+
+what interprets that? 
+
+Board methods consume player
+
+passGo(player) : gives player money
+owned properties keep reference of their owner.
+
+visitResidential(player): can buy / charges for parking
+Neighborhood(): I'm thinking something that all properties reference. Neighborhood shouldn't be exposed beyond a property.
+    
+receiveChance/CommunityChest(player): applies effects that:
+        give the player an item that can be used later
+        charges players
+        moves the player, 
+        Funds player/s? 
+    
+payTaxes(player): charge player.
+
+visitProperty(player): 
+visitRailroad(player): can buy / charges for parking
+visitUtility(player): can buy / charges for parking
+visitJail(player): can buy / charges for parking. 
+
+
+Jail is its own game mechanical a status with meta data?
+Players can have items
